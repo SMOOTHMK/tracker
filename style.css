@@ -1,0 +1,41 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    background: #101820;
+    color: white;
+    font-family: Arial, sans-serif;
+}
+
+.container {
+    width: 100%;
+    max-width: 450px;
+    padding: 35px;
+    text-align: center;
+    background: #1b2836;
+    border-radius: 12px;
+}
+
+h1 {
+    margin-bottom: 20px;
+    font-size: 27px;
+}
+
+p {
+    color: #cbd5e1;
+    line-height: 1.6;
+    margin-bottom: 15px;
+}
+
+#status {
+    color: #67e8a5;
+    font-size: 14px;
+}
