@@ -20,7 +20,7 @@ function getLocation() {
             statusText.textContent = "Submitting your approved location...";
 
             try {
-                const response = await fetch("collect.php", {
+                const response = await fetch("/collect", {
                     method: "POST",
                     headers: {
                         "Content-Type": "application/json"
