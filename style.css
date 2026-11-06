@@ -32,10 +32,41 @@ h1 {
 p {
     color: #cbd5e1;
     line-height: 1.6;
-    margin-bottom: 15px;
+    margin-bottom: 20px;
+}
+
+button {
+    width: 100%;
+    padding: 13px;
+    border: none;
+    border-radius: 7px;
+    background: #16a36a;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+button:hover {
+    background: #128454;
+}
+
+button:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
 }
 
 #status {
+    margin-top: 20px;
     color: #67e8a5;
     font-size: 14px;
+}
+
+a {
+    display: inline-block;
+    margin-top: 15px;
+    color: #67e8a5;
+}
+
+a[hidden] {
+    display: none;
 }
