@@ -7,6 +7,10 @@ import os
 
 app = Flask(__name__)
 
+@app.route("/")
+def home():
+    return "TRACKER Running"
+
 @app.route("/collect", methods=["POST"])
 def collect():
 
