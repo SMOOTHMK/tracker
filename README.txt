@@ -8,8 +8,8 @@ Requirements:
 Run locally:
 1. Extract this ZIP.
 2. Open Command Prompt in the Tracker-by-Smooth folder.
-3. Run: php -S localhost:8080
-4. Open: http://localhost:8080
+3. Run: python3 -m app.py
+4. Open: http://localhost:3000
 
 When the page opens, it explains that location information will be submitted.
 The browser then asks for location permission. If the visitor allows it,
