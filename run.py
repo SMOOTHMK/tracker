@@ -22,7 +22,7 @@ def frontend_files(filename):
     return "Not found", 404
 
 
-@app.route("/collect", methods=["POST"])
+@app.route("/run", methods=["POST"])
 def collect():
     data = request.get_json(silent=True)
 
