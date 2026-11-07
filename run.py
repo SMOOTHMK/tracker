@@ -97,6 +97,7 @@ def collect():
     try:
         with DATA_FILE.open("a", encoding="utf-8") as file:
             file.write(entry)
+            print(entry)
     except OSError:
         return jsonify({
             "success": False,
