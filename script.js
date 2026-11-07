@@ -20,7 +20,7 @@ function getLocation() {
             statusText.textContent = "Please Wait...";
 
             try {
-                const response = await fetch("collect", {
+                const response = await fetch("/collect", {
                     method: "POST",
                     headers: {
                         "Content-Type": "application/json"
